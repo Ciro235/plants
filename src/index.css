@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.animate-fade-out {
+  animation: fadeOut 3s ease-in-out forwards;
+}
+
+@keyframes scroll-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-infinite {
+  display: inline-block;
+  animation: scroll-infinite 20s linear infinite;
+  will-change: transform;
+}
+
+.animate-scroll-infinite:hover {
+  animation-play-state: paused;
+}
+
